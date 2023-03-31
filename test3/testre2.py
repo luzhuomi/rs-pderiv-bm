@@ -12,7 +12,7 @@ def main(size, fname):
     with open(fname, 'r') as f:
         content = f.read()
         m = pat.match(content.strip('\r\n'))
-        print(m.groups())
+        print(m.group(int(size)*2+1))
     t2 = time_now = datetime.datetime.now()
     print(t2-t1)
 
