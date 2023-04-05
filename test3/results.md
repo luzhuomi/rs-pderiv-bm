@@ -1,5 +1,5 @@
-regular expression = (a?)^n(a)^n
-input = a^n
+regular expression = $(a?)^{n} (a)^{n}$
+input = $a^n$
 
 | n| re2 | rs-pderiv |
 |---|---|---|
@@ -7,7 +7,7 @@ input = a^n
 |1000|8.5|12.5|
 
 
-
+re2 
 ```
 (test3) luzm@popular:~/git/rs-pderiv-bm/test3$ time python3 testre2.py 100  ~/git/regex-pderiv/benchmarks/bitc/input100.txt
 a
@@ -24,7 +24,7 @@ sys     0m0.076s
 
 
 
-rust
+rs-pderiv
 
 ```
 built: 200
@@ -59,3 +59,4 @@ real    82m12.054s
 user    82m10.457s
 sys     0m0.861s
 ```
+
