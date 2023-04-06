@@ -25,7 +25,7 @@ def mkpat(size):
     for j in range(size-1):
         snd = "(a)" + f"({snd})"
     pat_str = "^" + f"({fst})" + f"({snd})" + "$"
-    print(pat_str)
+    # print(pat_str)
     pat = re.compile(pat_str)
     return pat
 
