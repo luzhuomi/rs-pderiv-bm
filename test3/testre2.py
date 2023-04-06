@@ -18,7 +18,14 @@ def main(size, fname):
 
 def mkpat(size):
     size = int(size)
-    pat_str = "^" + ("((a)?)" * size) + ("(a)" * size) + "$"
+    fst = ""
+    for i in range(size):
+        fst = "((a)?)" + "({fst})"
+    snd = ""
+    for j in range(size):
+        snd = "(a)" + "({snd})"
+    pat_str = "^" + "({fst})" + "({snd})" + "$"
+    print(pat_str)
     pat = re.compile(pat_str)
     return pat
 
