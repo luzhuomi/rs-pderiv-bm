@@ -4,11 +4,18 @@ input = $a^n$
 
 | n| re2 | rs-pderiv |
 |---|---|---|
-|100| | 0.014 |
-|1000| | 0.015 |
+|100| 0.003 | 0.014 |
+|1000| 0.25 | 0.015 |
 |10000| 28 | 0.031|
 
+pyre2
 
+```
+
+$ python3 testre2.py 10000 ~/git/regex-pderiv/benchmarks/bitc/input10000.txt
+a
+0:00:28.507025
+```
 
 
 
