@@ -23,7 +23,7 @@ a
 Ok(
     14.565983ms,
 )
-./target/release/rs-pderiv 100 ~/git/regex-pderiv/benchmarks/bitc/input100.tx   0.06s  user 0.00s system 79% cpu 0.075 total
+./target/release/rs-pderiv 100 ~/git/regex-pderiv/benchmarks/bitc/input100.txt   0.06s  user 0.00s system 79% cpu 0.075 total
 avg shared (code):         0 KB
 avg unshared (data/stack): 0 KB
 total (sum):               0 KB

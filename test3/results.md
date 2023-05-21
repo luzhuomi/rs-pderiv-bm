@@ -3,8 +3,9 @@ input = $a^n$
 
 | n| re2 | rs-pderiv |
 |---|---|---|
-|100|0.007|0.009|
-|1000|8.5|12.5|
+|100|0.014|0.009|
+|1000|24|12.5|
+|10000|25337.3|15937.7 |
 
 
 re2 
@@ -20,7 +21,17 @@ a
 real    0m8.660s
 user    0m8.582s
 sys     0m0.076s
-```
+
+
+a
+7:02:17.335357
+python3 testre2.py 10000 ~/git/regex-pderiv/benchmarks/bitc/input10000.txt   25320.52s  user 14.74s system 99% cpu 7:02:17.45 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                45801 MB
+page faults from disk:     0
+other page faults:         11741890
 
 
 
@@ -58,5 +69,56 @@ Ok(
 real    82m12.054s
 user    82m10.457s
 sys     0m0.861s
+
+
+
+
+ip-172-31-84-125% time ./target/release/rs-pderiv 10000 ~/git/regex-pderiv/benchmarks/bitc/input10000.txt
+[src/main.rs:20] calculate_hash(&r) = 11266192224829374616
+[src/main.rs:21] calculate_hash(&calculate_hash(&r)) = 6181897037123288864
+[src/regex/pderiv/parse.rs:104] &all_states.len() = 20001
+built: 20000
+Ok(
+    164363.444813857s,
+)
+[src/main.rs:27] contents.len() = 10000
+mached
+Ok(
+    15937.734803669s,
+)
+./target/release/rs-pderiv 10000    179718.12s  user 576.00s system 99% cpu 50:05:07.97 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                95435 MB
+page faults from disk:     0
+other page faults:         317568811
+
+
+
+
+
+=============
+
+ip-172-31-84-125% time ./target/release/rs-pderiv 100 ~/git/regex-pderiv/benchmarks/bitc/input100.txt
+[src/main.rs:20] calculate_hash(&r) = 936750932477591847
+[src/main.rs:21] calculate_hash(&calculate_hash(&r)) = 1904562652236551557
+[src/regex/pderiv/parse.rs:104] &all_states.len() = 201
+built: 200
+Ok(
+    169.064987ms,
+)
+[src/main.rs:27] contents.len() = 100
+mached
+Ok(
+    14.510763ms,
+)
+./target/release/rs-pderiv 100 ~/git/regex-pderiv/benchmarks/bitc/input100.tx   0.18s  user 0.00s system 99% cpu 0.185 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                4 MB
+page faults from disk:     0
+other page faults:         708
 ```
 
