@@ -55,3 +55,45 @@ max memory:                62043 MB
 page faults from disk:     7379804
 other page faults:         25105965
 ```
+
+
+
+updated
+
+
+luzm@pop-p52:~/git/rs-pderiv$ /usr/bin/time -v ./target/release/rs-pderiv 10000 ~/git/regex-pderiv/benchmarks/bitc/input10000.txt
+[src/main.rs:20] calculate_hash(&r) = 3522703038391445407
+[src/main.rs:21] calculate_hash(&calculate_hash(&r)) = 14400948208678772285
+[src/regex/pderiv/parse.rs:104] &all_states.len() = 20001
+built: 20000
+Ok( 
+    44090.384919875s,
+)
+[src/main.rs:27] contents.len() = 10000
+mached
+Ok( 
+    229.015047ms,
+)
+        Command being timed: "./target/release/rs-pderiv 10000 /home/luzm/git/regex-pderiv/benchmarks/bitc/input10000.txt"
+        User time (seconds): 44068.57
+        System time (seconds): 24.37
+        Percent of CPU this job got: 99%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 12:14:55
+        Average shared text size (kbytes): 0
+        Average unshared data size (kbytes): 0
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 0
+        Maximum resident set size (kbytes): 71084428
+        Average resident set size (kbytes): 0
+        Major (requiring I/O) page faults: 0
+        Minor (reclaiming a frame) page faults: 17771265
+        Voluntary context switches: 1
+        Involuntary context switches: 274206
+        Swaps: 0
+        File system inputs: 0
+        File system outputs: 0
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 0
+        Page size (bytes): 4096
+        Exit status: 0
