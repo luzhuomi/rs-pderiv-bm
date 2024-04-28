@@ -122,3 +122,37 @@ page faults from disk:     0
 other page faults:         708
 ```
 
+
+
+built: 20000
+Ok( 
+    99627.259391234s,
+)
+[src/main.rs:27] contents.len() = 10000
+mached
+Ok( 
+    10239.51668394s,
+)
+        Command being timed: "./target/release/rs-pderiv 10000 /home/luzm/git/regex-pderiv/benchmarks/bitc/input10000.txt"
+        User time (seconds): 109480.67
+        System time (seconds): 387.92
+        Percent of CPU this job got: 99%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 30:31:12
+        Average shared text size (kbytes): 0
+        Average unshared data size (kbytes): 0
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 0
+        Maximum resident set size (kbytes): 97728368
+        Average resident set size (kbytes): 0
+        Major (requiring I/O) page faults: 0
+        Minor (reclaiming a frame) page faults: 317568923
+        Voluntary context switches: 1
+        Involuntary context switches: 567598
+        Swaps: 0
+        File system inputs: 0
+        File system outputs: 0
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 0
+        Page size (bytes): 4096
+        Exit status: 0
